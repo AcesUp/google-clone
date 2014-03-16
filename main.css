@@ -442,161 +442,226 @@ box-sizing: border-box;
 /**********************************************************
 	  CSS
 *********************************************************/
-/*
-* {
-	 outline: 1px solid black; 
-}
-*/
-html, body {
-	height: 100%;
-	font-family: Arial;
-	font-size: 13px;
+/* ---------------------- BOX OUTLINE CODE FOR DEBUGGING, COMMENTED OUT
+
+* { 
+  outline: 1px solid black;
+  font-family: Arial, sans-serif;
 }
 
-a:link,
-a:visited,
-a:active {
-	color: inherit;
-	text-decoration: none;
+BOX OUTLINE CODE FOR DEBUGGING, COMMENTED OUT --------------------*/
+
+
+/* ---------- WRAPPER ----------- */
+
+#wrapper {
+	height: auto;
+	width: 50% auto;
+
 }
 
-a:hover {
-	text-decoration: underline;
+/* ---------- END WRAPPER ----------- */
+
+/* ---------------- TOP NAVIGATION ------------------ */
+
+#navbox {
+	font-family: Arial, sans-serif;
+	font-size: .75em;
+	color: #262626;
+	height: 100px;
+	text-align: right;
+	margin-right: 30px;
+
 }
 
-#viewport {
-	height: 100%;
-	min-height: 500px;
-	margin-bottom: -45px;
-}
-
-section {
-	min-width: 986px;
-}
-
-#header {
-	position: fixed;
-}
-
-#header nav {
-	position: absolute;
-	right: 0;
-	padding: 10px;
-}
-
-#header nav ul,
-#bottom nav ul {
-	list-style-type: none;
-}
-
-#header nav ul li,
-#bottom nav ul li {
-	display: inline-block;
+#navbox img {
 	vertical-align: middle;
-	color: #666;
+}
+#navbox  a:hover{
+	    opacity:.5;
+	    text-decoration: underline;
 }
 
-#header nav ul li {
-	margin-right: 10px;
-	color: #333;
-}
-.grid {
-    background: url( 'https://dl.dropboxusercontent.com/u/261604981/google-clone/images/grid.png' ) no-repeat;
+#navbox a {
+		color: #262626;
 }
 
-#mainlogo {
-	padding-top: 90px;
-	text-align: center;
+#navbox a:visited {
+		color: #262626;
 }
 
-#mainlogo img {
-	width: 400px;
-}
-
-#search {
-	text-align: center;
-	padding: 15px;
-}
-
-#search input {
+.navbutton {
+	display: inline-block;
 	margin: 5px;
 }
 
-#search input[type=text] {
-	background: url('https://dl.dropboxusercontent.com/u/261604981/google-clone/images/microphone.png') right no-repeat;
-	background-size: 24px;
-	width: 500px;
-	border: 1px solid #ddd;
-	padding: 8px;
-	font-family: Arial;
-	font-size: 14px;
+.navbutton button {
+		color: white;
+		border: solid 1px #166CFF;
+		font-weight: bold;
+		height: 30px;
+		width: 73px;
+
+		-moz-border-radius: 2px;
+	    -webkit-border-radius: 2px;
+	    border-radius: 2px;
+
+/* -- MICROSOFT GRADIENT GENERATOR ---- */
+
+	/* IE10 Consumer Preview */ 
+background-image: -ms-radial-gradient(center, ellipse farthest-corner, #4585F3 0%, #4387FC 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, ellipse farthest-corner, #4585F3 0%, #4387FC 100%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, ellipse farthest-corner, #4585F3 0%, #4387FC 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #4585F3), color-stop(1, #4387FC));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #4585F3 0%, #4387FC 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: radial-gradient(ellipse farthest-corner at center, #4585F3 0%, #4387FC 100%);
+
+
+
 }
 
-#search input[type=text]:hover {
-	border: 1px solid #ccc;
-}
+/* ---------------- END TOP NAVIGATION ------------------ */
 
-#search input[type=text]:active {
-	border: 1px solid blue;
-}
 
-#search input[type=submit] {
-	border: 1px solid #ddd;
-	background: #efefef;
-	padding: 7px;
-	font-weight: bold;
-	color: #444;
-	border-radius: 2px;
-}
+/* ---------------- MAIN CONTENT AREA --------------------*/
 
-#search input[type=submit]:hover {
-	border: 1px solid #ccc;
-	box-shadow: 0px 1px 0px #ccc;
-}
-
-#note {
-	text-align: center;
-	padding: 15px;
-}
-
-#bottom {
+#main {
+	margin-top: 150px;
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;
 	position: relative;
-	padding: 15px;
-	background: #eee;
-	border-top: 1px solid #ddd;
+	width: 610px;
+
 }
 
-#bottom ul li {
-	padding-left: 10px;
-	padding-right: 10px;
+#logo {
+	margin-left:auto;
+	margin-right:auto;
+	width: 275px;
+	margin-top: 80px;
 }
 
-#bottom .left {
-	float: left;
+#searchbox {
+	margin-left:auto;
+	margin-right:auto;
+	width: 600px;
 }
 
-#bottom .right {
-	float: right;
+#searchbox input {
+		margin-top: 20px;
+		margin-left:auto;
+		margin-right:auto;
+		position: relative;
+		width: 600px;
+		height: 20px;
+		background: url(images/microphone.png) right no-repeat;
+		background-size: 25px 25px;
+		padding: 5px;
+		border: #6B6B6B 1px solid;
+
 }
 
-#bottom .clear {
-	clear: both;
+#searchbox img {
+		vertical-align: right;
+		margin-right: 20px;
+}
+
+input {
+	width: 600px;
+}
+
+#searchbuttons{	
+	margin-left:190px;
+	width: 400px;
+	height: 40px;
+
+}
+
+.button-li {
+	display: inline-block;
+	margin: 5px;
+	padding-top: 3px;
+}
+
+.button-li button {
+		background-color: #F2F2F2;
+		color: #353535;
+		font-weight: bold;
+		font-size: .75em;
+		padding: 3px;
+
+		-moz-border-radius: 3px;
+		    -webkit-border-radius: 3px;
+		    border-radius: 3px;
+
+}
+
+/* ---------------- END MAIN CONTENT AREA --------------------*/
+
+/* -------------------- FOOTER --------------------------------*/
+
+
+#bottomlinks {
+	font-family: Arial, sans-serif;
+	height: 45px;
+	margin-top: 20px;
+	width: 100%;
 	position: fixed;
-}
-
-.link {
-	color: blue;
-}
-
-.grid {
-	width: 23px;
-}
-
-.button {
-	background-color: #1C86EE;
-	padding: 8px;
-	padding-left: 11px;
-	padding-right: 11px;
+	bottom: 0;
+	background-color: #F2F2F2;
+	border-top: 1px #BFBFBF;
+	color: #666666;
 	font-weight: bold;
-	border-radius: 2px;
+	font-size: .75em;
 }
+
+#bottomlinks a {
+	text-decoration: none;
+	color: #666666;
+}
+
+#bottomlinks a:hover {
+	text-decoration: underline;
+	color: #666666;
+
+}
+
+#bottomlinks a:visited {
+	text-decoration: none;
+	color: #666666;
+
+}
+
+#footer-right {
+	width: 180px;
+	float: right;
+	padding: 10px 30px 10px 0px;
+}
+
+#footer-left {
+	width: 220px;
+	float: left;
+	padding: 10px 0px 10px 30px;
+}
+
+.li-left {
+	display: inline-block;
+	margin: 5px;		
+}
+
+.li-right {
+	display: inline-block;
+	margin: 5px;
+}
+/* -------------------- END OF FOOTER --------------------------------*/
