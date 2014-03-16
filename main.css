@@ -475,7 +475,7 @@ section {
 }
 
 #header {
-	position: relative;
+	position: fixed;
 }
 
 #header nav {
